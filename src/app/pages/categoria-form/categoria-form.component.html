@@ -1,0 +1,15 @@
+<h5 class="mb-5 text-lg font-bold tracking-tight text-gray-900 dark:text-white ">Categoria Detalhes</h5>
+<form [formGroup]="categoriaForm" class="w-full" (ngSubmit)="onSubmit()" novalidate>
+  <div class="mb-5">
+    <label for="nome" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome</label>
+    <input type="text" id="nome" class="form-control" placeholder="Nome" formControlName="nome">
+    @if (categoriaForm.get('nome')?.hasError('required') && categoriaForm.get('nome')?.touched) {
+    <div class="form-error">Nome é obrigatório</div>
+    }
+  </div>
+
+  <button type="submit"
+    class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg w-full sm:w-auto px-5 py-2.5 text-center">Salvar</button>
+  <button type="button" (click)="onClose()"
+    class="text-white  ms-2 bg-gray-700 hover:bg-gray-800 font-medium rounded-lg w-full sm:w-auto px-5 py-2.5 text-center">Cancelar</button>
+</form>
