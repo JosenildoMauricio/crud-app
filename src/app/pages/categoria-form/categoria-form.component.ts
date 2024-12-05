@@ -26,7 +26,7 @@ import { CategoriaService } from '../../services/categoria/categoria.service';
 })
 export class CategoriaFormComponent implements OnChanges {
   @Input() data: ICategoria | null = null;
-  @Output() onCloseModel = new EventEmitter();
+  @Output() onCloseModal = new EventEmitter();
 
   categoriaForm!: FormGroup;
 
@@ -42,7 +42,7 @@ export class CategoriaFormComponent implements OnChanges {
 
   onClose() {
     this.categoriaForm.reset();
-    this.onCloseModel.emit(false);
+    this.onCloseModal.emit(false);
   }
 
   ngOnChanges(): void {

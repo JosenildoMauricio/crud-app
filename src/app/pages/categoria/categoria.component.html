@@ -1,5 +1,5 @@
 <div class="flex justify-end items-center mb-6">
-  <button type="button" (click)="openModel()"
+  <button type="button" (click)="openModal()"
     class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-full px-6 py-3 text-center mb-2 ">Adicionar Categoria</button>
 </div>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -37,6 +37,6 @@
 </div>
 
 
-<app-modal [isOpen]="isModelOpen" (closeModel)="closeModel()">
-  <app-categoria-form (onCloseModel)="closeModel()" [data]="selectedCategoria"></app-categoria-form>
+<app-modal [isOpen]="isModalOpen" (closeModal)="closeModal()">
+  <app-categoria-form (onCloseModal)="closeModal()" [data]="selectedCategoria"></app-categoria-form>
 </app-modal>

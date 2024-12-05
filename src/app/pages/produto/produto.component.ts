@@ -12,7 +12,7 @@ import { IProduto } from '../shared/models/Produto';
   styleUrl: './produto.component.scss',
 })
 export class ProdutoComponent implements OnInit {
-  isModelOpen = false;
+  isModalOpen = false;
   produtos: IProduto[] = [];
   produto!: IProduto;
 
@@ -42,7 +42,7 @@ export class ProdutoComponent implements OnInit {
 
   carregaProduto(produto: IProduto) {
     this.produto = produto;
-    this.openModel();
+    this.openModal();
   }
 
   deletaProduto(id: number) {
@@ -59,12 +59,12 @@ export class ProdutoComponent implements OnInit {
     });
   }
 
-  openModel() {
-    this.isModelOpen = true;
+  openModal() {
+    this.isModalOpen = true;
   }
 
-  closeModel() {
-    this.isModelOpen = false;
+  closeModal() {
+    this.isModalOpen = false;
     this.buscaTodosProduto();
   }
 }

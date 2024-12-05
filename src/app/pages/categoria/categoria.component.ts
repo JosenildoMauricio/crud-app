@@ -12,7 +12,7 @@ import { ICategoria } from '../shared/models/Categoria';
   styleUrl: './categoria.component.scss',
 })
 export class CategoriaComponent implements OnInit {
-  isModelOpen = false;
+  isModalOpen = false;
   categorias: ICategoria[] = [];
   selectedCategoria!: ICategoria;
 
@@ -37,7 +37,7 @@ export class CategoriaComponent implements OnInit {
 
   carregaCategoria(categoria: ICategoria) {
     this.selectedCategoria = categoria;
-    this.openModel();
+    this.openModal();
   }
 
   deletaCategoria(id: number) {
@@ -54,12 +54,12 @@ export class CategoriaComponent implements OnInit {
     });
   }
 
-  openModel() {
-    this.isModelOpen = true;
+  openModal() {
+    this.isModalOpen = true;
   }
 
-  closeModel() {
-    this.isModelOpen = false;
+  closeModal() {
+    this.isModalOpen = false;
     this.buscaTodosCategoria();
   }
 }

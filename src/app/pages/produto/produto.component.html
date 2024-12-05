@@ -1,6 +1,6 @@
 <div class="flex justify-end items-center mb-6">
   <h4 class="font-bold text-2xl"></h4>
-  <button type="button" (click)="openModel()"
+  <button type="button" (click)="openModal()"
     class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-full px-6 py-3 text-center mb-2 ">Adicionar Produto</button>
 </div>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -56,6 +56,6 @@
 </div>
 
 
-<app-modal [isOpen]="isModelOpen" (closeModel)="closeModel()">
-  <app-produto-form (onCloseModel)="closeModel()" [data]="produto"></app-produto-form>
+<app-modal [isOpen]="isModalOpen" (closeModal)="closeModal()">
+  <app-produto-form (onCloseModal)="closeModal()" [data]="produto"></app-produto-form>
 </app-modal>
